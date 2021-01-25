@@ -31,3 +31,8 @@
 	font-weight: bold;
 	color: #010d41;
 }
+
+li:hover {
+	background-color: #010d41;
+	color: #efefef;
+}

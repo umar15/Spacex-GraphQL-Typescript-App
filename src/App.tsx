@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
 import "./App.css";
 import LaunchesData from "./components/LaunchList/index";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
@@ -10,11 +10,15 @@ const client = new ApolloClient({
 });
 
 function App() {
+	const [id, setId] = useState(42);
+	const handleIdChange = useCallback((newId) => {
+		setId(newId);
+	}, []);
 	return (
 		<ApolloProvider client={client}>
 			<div className="App">
-				<LaunchesData />
-				<LaunchProfile />
+				<LaunchesData handleIdChange={handleIdChange} />
+				<LaunchProfile id={id} />
 			</div>
 		</ApolloProvider>
 	);

@@ -1,8 +1,8 @@
 import React from "react";
 import { useLaunchListQuery } from "../../generated/graphql";
-import LaunchList from "./LaunchList";
+import LaunchList, { OwnProps } from "./LaunchList";
 
-const LaunchesData = () => {
+const LaunchesData = (props: OwnProps) => {
 	const { data, error, loading } = useLaunchListQuery();
 
 	if (loading) {
@@ -21,7 +21,7 @@ const LaunchesData = () => {
 		);
 	}
 
-	return <LaunchList data={data} />;
+	return <LaunchList data={data} {...props} />;
 };
 
 export default LaunchesData;
