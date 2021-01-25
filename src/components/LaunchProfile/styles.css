@@ -1,0 +1,38 @@
+.LaunchProfile {
+	height: 100vh;
+	max-height: 100%;
+	width: calc(100vw - 300px);
+	overflow: hidden auto;
+	padding: 0 20px;
+	background-color: #efefef;
+}
+
+.status {
+	margin-top: 10px;
+	line-height: 0%;
+}
+
+.title {
+	margin-top: 20px;
+	margin-bottom: 4px;
+}
+
+.success {
+	color: green;
+}
+
+.failed {
+	color: red;
+}
+
+.image-list {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(2, 1fr);
+	margin-top: 40px;
+	padding-bottom: 100px;
+}
+
+.image {
+	width: 100%;
+}
