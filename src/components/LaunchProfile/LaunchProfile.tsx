@@ -37,7 +37,7 @@ const LaunchProfile: React.FC<Props> = ({ data }) => {
 							<img
 								src={image}
 								className="image"
-								alt="image"
+								alt="launch"
 								key={image}
 							/>
 						) : null
